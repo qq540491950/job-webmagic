@@ -1,0 +1,25 @@
+server:
+  port: 8899
+
+# 数据库设置
+spring:
+  application:
+    name: job_webmagic
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hello?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+# mybatis设置
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: package com.lirt.job.entity
+
+# sql打印
+logging:
+  level:
+    com:
+      lirt:
+        job:
+          dao: debug
